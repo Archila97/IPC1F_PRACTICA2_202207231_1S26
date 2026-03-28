@@ -188,8 +188,31 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnPuntuacionesActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnRegistrarActionPerformed
+        // se toman los datos obtenido en los textboxs
+        String id = txtID.getText();
+        String nom = txtNombre.getText();
+        String casa = txtCasa.getText();
+        String escoba = cbEscoba.getSelectedItem().toString();
+        int vel;
+
+        //velocidad segun el modelo
+        if (escoba.equals("Saeta de Fuego")) {
+            vel = 1;
+        } else if (escoba.equals("Nimbus 2000")) {
+            vel = 2;
+        } else {
+            vel = 3; 
+        }
+        // Creamos el objeto
+        datos.Personaje nuevo = new datos.Personaje(id, nom, casa, escoba, vel);
+
+        // Intentamos guardar en el Almacen 
+        if (datos.Almacenar.registrar(nuevo)) {
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Personaje " + nom + " registrado!");
+            
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error: El ID ya existe o el equipo está lleno.");
+        }    }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnRegistrar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrar1ActionPerformed
         txtID.setText("");
