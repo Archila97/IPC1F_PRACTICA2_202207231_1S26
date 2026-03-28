@@ -1,14 +1,15 @@
 package datos;
 
 public class Personaje {
+
     private String carnet;
     private String nombre;
     private String casa;
-    private String modeloEscoba; 
+    private String modeloEscoba;
     private int retraso; // El tiempo de espera en s
     private int puntos;
 
-    public Personaje(String carnet, String apodo, String modelo,String casa, int retraso) {
+    public Personaje(String carnet, String apodo, String modelo, String casa, int retraso) {
         this.carnet = carnet;
         this.nombre = apodo;
         this.casa = casa;
@@ -17,12 +18,34 @@ public class Personaje {
         this.puntos = 0;
     }
 
-    // leer tabla
-    public String getCarnet() { return carnet; }
-    public String getApodo() { return nombre; }
-    public String getModeloEscoba() { return modeloEscoba; }
-    public int getRetraso() { return retraso; }
-    public int getPuntos() { return puntos; }
+    //obtenemos informacion que el usuario envia
+    public String getCarnet() {
+        return carnet;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getCasa() {
+        return casa;
+    }
+
+    public String getModeloEscoba() {
+        return modeloEscoba;
+    }
+
+    public int getRetraso() {
+        return retraso;
+    }
+
+    public int getPuntos() {
+        return puntos;
+    }
+
     
-    public void setPuntos(int puntos) { this.puntos = puntos; }
+    public void setPuntos(int puntos) {
+        this.puntos = puntos;
+    }
+
 }

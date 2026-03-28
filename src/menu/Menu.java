@@ -184,8 +184,12 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnIniciarActionPerformed
 
     private void btnPuntuacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuntuacionesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPuntuacionesActionPerformed
+        if (datos.Almacenar.contador > 0) {
+            String lista = "Último registro: " + datos.Almacenar.misCorredores[datos.Almacenar.contador - 1].getNombre();
+            javax.swing.JOptionPane.showMessageDialog(this, lista);
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "No hay nadie en el equipo.");
+        }    }//GEN-LAST:event_btnPuntuacionesActionPerformed
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
         // se toman los datos obtenido en los textboxs
@@ -201,7 +205,7 @@ public class Menu extends javax.swing.JFrame {
         } else if (escoba.equals("Nimbus 2000")) {
             vel = 2;
         } else {
-            vel = 3; 
+            vel = 3;
         }
         // Creamos el objeto
         datos.Personaje nuevo = new datos.Personaje(id, nom, casa, escoba, vel);
@@ -209,7 +213,7 @@ public class Menu extends javax.swing.JFrame {
         // Intentamos guardar en el Almacen 
         if (datos.Almacenar.registrar(nuevo)) {
             javax.swing.JOptionPane.showMessageDialog(this, "¡Personaje " + nom + " registrado!");
-            
+
         } else {
             javax.swing.JOptionPane.showMessageDialog(this, "Error: El ID ya existe o el equipo está lleno.");
         }    }//GEN-LAST:event_btnRegistrarActionPerformed
