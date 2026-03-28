@@ -15,3 +15,4 @@ public class PRACTICA2 {
         // mostramos al usuario
         inicio.setVisible(true);
     }
+}
