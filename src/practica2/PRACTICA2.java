@@ -4,15 +4,14 @@ package practica2;
  *
  * @202207231 Jenifer Carolina Archila Gómez
  */
-import vistas.VentanaMenu;
+import menu.Menu;
 
 public class PRACTICA2 {
 
     public static void main(String[] args) {
         // 1objeto para el menu
-        PantallaPrincipal inicio = new PantallaPrincipal();
-
+        Menu ventana = new Menu();
         // mostramos al usuario
-        inicio.setVisible(true);
+        ventana.setVisible(true);
     }
 }
