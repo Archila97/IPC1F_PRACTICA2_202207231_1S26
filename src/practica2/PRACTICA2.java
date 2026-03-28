@@ -1,20 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package practica2;
 
 /**
  *
- * @author Usuario
+ * @202207231 Jenifer Carolina Archila Gómez
  */
+import vistas.VentanaMenu;
+
 public class PRACTICA2 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // 1objeto para el menu
+        PantallaPrincipal inicio = new PantallaPrincipal();
+
+        // mostramos al usuario
+        inicio.setVisible(true);
     }
-    
-}
